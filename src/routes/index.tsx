@@ -12,7 +12,6 @@ import {
   ShieldPlus,
   Siren,
 } from "lucide-react";
-import { HospitalFilm } from "@/components/hospital-film";
 import { Button } from "@/components/ui/button";
 import {
   clinicTimetable,
@@ -95,7 +94,22 @@ function Home() {
             </div>
           </div>
           <div className="hero-visual">
-            <HospitalFilm />
+            <figure className="hospital-hero-photo">
+              <img
+                src={exterior}
+                alt="Entebbe Regional Referral Hospital building"
+                fetchPriority="high"
+              />
+              <div className="photo-location">
+                <span className="status-dot" /> Entebbe, Uganda
+              </div>
+              <figcaption className="photo-caption">
+                <div>
+                  <span className="eyebrow">A place for our community</span>
+                  <p>Welcome to Entebbe Regional.</p>
+                </div>
+              </figcaption>
+            </figure>
             <div className="hero-visual-foot">
               <span>Rooted in Entebbe.</span>
               <span>

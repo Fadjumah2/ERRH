@@ -308,7 +308,7 @@
   top: -14px;
   border-radius: 0 30px 0 0;
 }
-.hospital-film {
+.hospital-hero-photo {
   position: relative;
   overflow: hidden;
   border-radius: 90px 14px 14px 14px;
@@ -316,20 +316,20 @@
   aspect-ratio: 1.04;
   box-shadow: 0 24px 55px -35px #163e3877;
 }
-.hospital-film video {
+.hospital-hero-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 53% center;
 }
-.hospital-film::after {
+.hospital-hero-photo::after {
   content: "";
   pointer-events: none;
   position: absolute;
   inset: 45% 0 0;
   background: linear-gradient(transparent, #082b28dc);
 }
-.film-location {
+.photo-location {
   position: absolute;
   top: 23px;
   right: 20px;
@@ -351,7 +351,7 @@
   border-radius: 50%;
   background: var(--sun);
 }
-.film-caption {
+.photo-caption {
   position: absolute;
   z-index: 1;
   bottom: 27px;
@@ -363,32 +363,17 @@
   justify-content: space-between;
   gap: 15px;
 }
-.film-caption .eyebrow {
+.photo-caption .eyebrow {
   font-size: 9px;
   color: var(--sun);
 }
-.film-caption p {
+.photo-caption p {
   font-size: clamp(20px, 2.2vw, 28px);
   line-height: 1.2;
   letter-spacing: -0.025em;
   font-weight: 600;
   max-width: 290px;
   margin-top: 10px;
-}
-.film-control {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 12px;
-  border: 1px solid #ffffff75;
-  background: #123b3588;
-  border-radius: 99px;
-  cursor: pointer;
-  font-size: 11px;
-  white-space: nowrap;
-}
-.film-control:hover {
-  background: #123b35;
 }
 .hero-visual-foot {
   display: flex;
@@ -541,7 +526,7 @@
     margin-top: 23px;
     padding-top: 18px;
   }
-  .hospital-film {
+  .hospital-hero-photo {
     aspect-ratio: 1.28;
     border-top-left-radius: 65px;
   }
@@ -549,11 +534,11 @@
     right: -8px;
     top: -8px;
   }
-  .film-caption {
+  .photo-caption {
     bottom: 22px;
     left: 22px;
   }
-  .film-caption p {
+  .photo-caption p {
     font-size: 22px;
   }
   .journal-heading {
