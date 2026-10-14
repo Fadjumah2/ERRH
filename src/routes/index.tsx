@@ -110,9 +110,6 @@ function Home() {
                 height={796}
                 fetchPriority="high"
               />
-              <div className="photo-location">
-                <span className="status-dot" /> Entebbe, Uganda
-              </div>
               <figcaption className="photo-caption">
                 <div>
                   <span className="eyebrow">A place for our community</span>

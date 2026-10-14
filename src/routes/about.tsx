@@ -57,7 +57,7 @@ function AboutPage() {
             </Link>
           </Button>
         </div>
-        <figure className="overflow-hidden rounded-2xl bg-sage">
+        <figure className="overflow-hidden bg-sage">
           <img
             src={partnership}
             alt="Hospital representatives and visitors working together in a meeting"

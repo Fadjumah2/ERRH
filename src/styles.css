@@ -297,21 +297,10 @@
   position: relative;
   min-width: 0;
 }
-.hero-visual::before {
-  content: "";
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  border-top: 1px solid #bd9a50;
-  border-right: 1px solid #bd9a50;
-  right: -14px;
-  top: -14px;
-  border-radius: 0 30px 0 0;
-}
 .hospital-hero-photo {
   position: relative;
   overflow: hidden;
-  border-radius: 90px 14px 14px 14px;
+  border-radius: 0;
   background: var(--forest);
   box-shadow: 0 24px 55px -35px #163e3877;
 }
@@ -322,30 +311,19 @@
   aspect-ratio: 1344 / 796;
   object-fit: contain;
 }
-.photo-location {
+.hospital-hero-photo::after {
+  content: "";
   position: absolute;
-  top: 23px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: white;
-  background: #123b359c;
-  backdrop-filter: blur(8px);
-  border: 1px solid #ffffff40;
-  border-radius: 99px;
-  padding: 8px 12px;
-  font-size: 10px;
-  font-weight: 600;
-}
-.status-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--sun);
+  inset: 40% 0 0;
+  pointer-events: none;
+  background: linear-gradient(transparent, rgb(5 31 28 / 0.88));
 }
 .photo-caption {
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 24px 26px;
   color: white;
   display: flex;
@@ -425,7 +403,7 @@
 }
 .journal-grid figure {
   overflow: hidden;
-  border-radius: 13px;
+  border-radius: 0;
   background: #fffdfa;
 }
 .journal-grid img {
@@ -515,13 +493,6 @@
   .hero-note {
     margin-top: 23px;
     padding-top: 18px;
-  }
-  .hospital-hero-photo {
-    border-top-left-radius: 65px;
-  }
-  .hero-visual::before {
-    right: -8px;
-    top: -8px;
   }
   .photo-caption {
     padding: 22px;
