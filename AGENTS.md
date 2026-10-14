@@ -12,4 +12,4 @@
 ## Site architecture
 - Keep hospital services, about, updates, and contact as separate TanStack routes, with shared navigation in the root layout, so each page is directly reachable and indexable.
 - Use the local hospital photos in public/images with Vite's BASE_URL so photos work on both Lovable and GitHub Pages.
-- Never commit built output (index.html, page folders, assets/) at the repo root — TanStack Start reuses a root index.html as its prerender template, so a stale copy silently breaks later builds. The GitHub Pages site is built from source by the GitHub Actions workflow, which uploads dist/client.
+- Never commit built output (index.html, page folders, assets/) at the repo root — TanStack Start reuses a root index.html as its prerender template, so a stale copy silently breaks later builds. The GitHub Pages site is built from source by the GitHub Actions workflow, which uploads .output/public.
