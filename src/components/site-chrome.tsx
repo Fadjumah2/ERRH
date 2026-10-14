@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Clock3, MapPin, Menu, Phone, Siren, X } from "lucide-react";
 import { useState } from "react";
-import { hospitalLogo } from "@/lib/images";
+import { hospitalLogo, coatOfArms } from "@/lib/images";
 import { Button } from "@/components/ui/button";
 import { directionsUrl, hospitalName, phone, phoneHref } from "@/lib/hospital";
 
@@ -61,11 +61,20 @@ export function Header() {
             className="flex min-w-0 items-center gap-3"
             aria-label="Entebbe Regional Referral Hospital home"
           >
-            <Mark />
-            <span className="brand-name">
-              Entebbe Regional
-              <br />
-              Referral Hospital
+            <img
+              src={coatOfArms}
+              alt="Uganda coat of arms"
+              width={73}
+              height={65}
+              className="government-mark"
+            />
+            <span className="brand-identity">
+              <span className="ministry-label">Ministry of Health</span>
+              <span className="brand-name">
+                Entebbe Regional
+                <br />
+                Referral Hospital
+              </span>
             </span>
           </Link>
           <nav className="hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Main navigation">

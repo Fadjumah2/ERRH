@@ -14,3 +14,6 @@ export const equipment = equipmentPhoto;
 export const partnership = partnershipPhoto;
 export const frontGate = frontGatePhoto;
 export const hospitalLogo = `${import.meta.env.BASE_URL}branding/hospital-crest.webp`;
+
+// Coat of arms from the Ministry of Health branding on mbalehospital.go.ug.
+export const coatOfArms = `${import.meta.env.BASE_URL}branding/uganda-coat-of-arms.png`;
