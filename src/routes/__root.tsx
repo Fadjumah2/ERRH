@@ -79,10 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#442451" },
       { title: "Entebbe Regional Referral Hospital" },
       { name: "description", content: "Quality healthcare close to you in Entebbe, Uganda." },
       { property: "og:title", content: "Entebbe Regional Referral Hospital" },
-      { property: "og:description", content: "Quality healthcare close to you in Entebbe, Uganda." },
+      {
+        property: "og:description",
+        content: "Quality healthcare close to you in Entebbe, Uganda.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@EntebbeRRH" },
@@ -92,10 +96,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: `${import.meta.env.BASE_URL}favicon.ico`, type: "image/x-icon" },
+      {
+        rel: "icon",
+        href: `${import.meta.env.BASE_URL}favicon.ico?v=crest-20261014`,
+        type: "image/x-icon",
+      },
+      { rel: "apple-touch-icon", href: `${import.meta.env.BASE_URL}branding/apple-touch-icon.png` },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -125,7 +137,9 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Header />
-      <main><Outlet /></main>
+      <main id="main-content" tabIndex={-1}>
+        <Outlet />
+      </main>
       <Footer />
     </QueryClientProvider>
   );
