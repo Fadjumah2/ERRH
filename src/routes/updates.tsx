@@ -58,27 +58,29 @@ function UpdatesPage() {
         <div className="mt-11 grid gap-x-6 gap-y-12 md:grid-cols-3">
           {updates.map((item) => (
             <article key={item.title}>
-              <a href={item.href} target="_blank" rel="noreferrer" className="group block">
-                <div className="overflow-hidden rounded-xl bg-sage">
-                  <img
-                    src={images[item.image]}
-                    alt={item.title}
-                    className="h-auto w-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="mt-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[.08em] text-primary">
-                  <span>{item.category}</span>
-                  <span className="size-1 rounded-full bg-sun" />
-                  <span className="text-muted-foreground">{item.date}</span>
-                </div>
-                <h3 className="mt-3 text-xl font-semibold leading-snug group-hover:text-primary">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.description}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
-                  View original post <ArrowUpRight className="size-4" />
-                </span>
+              <div className="overflow-hidden rounded-xl bg-sage">
+                <img
+                  src={images[item.image]}
+                  alt={item.title}
+                  className="h-auto w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[.08em] text-primary">
+                <span>{item.category}</span>
+                <span className="size-1 rounded-full bg-sun" />
+                <span className="text-muted-foreground">{item.date}</span>
+              </div>
+              <h3 className="mt-3 text-xl font-semibold leading-snug">{item.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.description}</p>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${item.title} on X`}
+                className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+              >
+                View original post <ArrowUpRight className="size-4" />
               </a>
             </article>
           ))}

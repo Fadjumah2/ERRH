@@ -410,13 +410,7 @@ function Home() {
           </div>
           <div className="mt-11 grid gap-5 md:grid-cols-3">
             {updates.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group"
-              >
+              <article key={item.title}>
                 <div className="overflow-hidden rounded-xl bg-sage">
                   <img
                     src={newsImages[item.image]}
@@ -430,13 +424,17 @@ function Home() {
                   <span className="size-1 rounded-full bg-sun" />
                   <span className="text-muted-foreground">{item.date}</span>
                 </div>
-                <h3 className="mt-3 text-xl font-semibold leading-snug group-hover:text-primary">
-                  {item.title}
-                </h3>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary">
+                <h3 className="mt-3 text-xl font-semibold leading-snug">{item.title}</h3>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Read ${item.title} on X`}
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
+                >
                   Read on X <ArrowUpRight className="size-4" />
-                </span>
-              </a>
+                </a>
+              </article>
             ))}
           </div>
           <Link
