@@ -17,7 +17,6 @@ import {
   HeartPulse,
   MapPin,
   Phone,
-  ShieldPlus,
   Siren,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -253,6 +252,37 @@ function Home() {
         </div>
       </section>
 
+      <section
+        className="site-container middle-photo-break"
+        aria-labelledby="hospital-team-heading"
+      >
+        <div className="team-photo-heading">
+          <div>
+            <p className="eyebrow text-primary">A hospital for our people</p>
+            <h2 id="hospital-team-heading" className="section-title">
+              People at the heart
+              <br />
+              of our care<span className="text-primary">.</span>
+            </h2>
+          </div>
+          <p>
+            Dedicated teams, a shared purpose and a commitment to the communities of Entebbe and
+            beyond.
+          </p>
+        </div>
+        <figure>
+          <img
+            src={team}
+            alt="Hospital team and guests gathered outside Entebbe Regional Referral Hospital"
+            width={2048}
+            height={1536}
+            loading="lazy"
+            className="editorial-photo"
+          />
+          <figcaption>Our hospital community, together in Entebbe.</figcaption>
+        </figure>
+      </section>
+
       <section className="bg-sage py-20 lg:py-24">
         <div className="site-container grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -352,46 +382,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-forest text-forest-foreground">
-        <div className="grid lg:grid-cols-2">
-          <div className="min-h-[420px] lg:min-h-[570px]">
-            <img
-              src={team}
-              alt="Hospital team and guests gathered outside Entebbe Regional Referral Hospital"
-              className="size-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex items-center px-6 py-16 sm:px-12 lg:px-[min(7vw,100px)]">
-            <div className="max-w-lg">
-              <p className="eyebrow mb-6 text-sun">A hospital for our people</p>
-              <h2 className="section-title">
-                People at the heart of everything we do<span className="text-sun">.</span>
-              </h2>
-              <p className="mt-7 text-base leading-8 text-forest-foreground/75">
-                We believe quality care begins with listening. Our hospital brings together
-                dedicated professionals, essential services and a shared commitment to the
-                communities of Entebbe and beyond.
-              </p>
-              <div className="mt-9 flex gap-6 border-t border-forest-foreground/20 pt-7">
-                <ShieldPlus className="mt-1 size-8 shrink-0 text-sun" />
-                <div>
-                  <strong className="block text-lg">Care with purpose</strong>
-                  <p className="mt-2 text-sm leading-6 text-forest-foreground/70">
-                    Working together to make every visit a more supportive experience.
-                  </p>
-                </div>
-              </div>
-              <Button asChild variant="sun" size="lg" className="mt-9">
-                <Link to="/about/">
-                  Get to know us <ArrowUpRight />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 lg:py-28">
         <div className="site-container">
           <div className="flex items-end justify-between gap-6">
@@ -417,12 +407,12 @@ function Home() {
                 rel="noreferrer"
                 className="group"
               >
-                <div className="aspect-[1.44] overflow-hidden bg-sage">
+                <div className="overflow-hidden rounded-xl bg-sage">
                   <img
                     src={newsImages[item.image]}
                     alt={item.title}
                     loading="lazy"
-                    className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-auto w-full object-contain"
                   />
                 </div>
                 <div className="mt-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[.08em] text-primary">

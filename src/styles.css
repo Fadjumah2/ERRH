@@ -200,10 +200,39 @@
 }
 .hero-layout {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 56px;
+  grid-template-columns: 1fr;
+  gap: 38px;
   align-items: center;
-  padding-block: 58px 54px;
+  padding-block: 40px 44px;
+}
+.hero-copy {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  column-gap: 70px;
+  align-items: start;
+}
+.hero-copy .hero-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+}
+.hero-copy h1 {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.hero-copy .hero-intro {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 0;
+}
+.hero-copy .hero-actions {
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 24px;
+}
+.hero-copy .hero-note {
+  grid-column: 2;
+  grid-row: 4;
+  margin-top: 22px;
 }
 .hero-kicker {
   display: flex;
@@ -224,7 +253,7 @@
   line-height: 1.02;
   letter-spacing: -0.055em;
   font-weight: 600;
-  margin-top: 25px;
+  margin-top: 0;
   color: var(--forest);
 }
 .hero-copy h1 > span {
@@ -300,7 +329,7 @@
 .hospital-hero-photo {
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 12px;
   background: var(--forest);
   box-shadow: 0 24px 55px -35px #163e3877;
 }
@@ -340,7 +369,7 @@
   line-height: 1.2;
   letter-spacing: -0.025em;
   font-weight: 600;
-  max-width: 290px;
+  max-width: 100%;
   margin-top: 10px;
 }
 .hero-visual-foot {
@@ -397,13 +426,13 @@
 }
 .journal-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 30px;
 }
 .journal-grid figure {
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 12px;
   background: #fffdfa;
 }
 .journal-grid img {
@@ -412,7 +441,7 @@
   aspect-ratio: 4 / 3;
 }
 .journal-secondary {
-  margin-top: 60px;
+  margin-top: 0;
 }
 .journal-grid figcaption {
   padding: 24px 27px 28px;
@@ -469,8 +498,30 @@
 @media (max-width: 767px) {
   .hero-layout {
     grid-template-columns: 1fr;
-    padding-block: 35px;
-    gap: 35px;
+    padding-block: 30px;
+    gap: 30px;
+  }
+  .hero-copy {
+    display: block;
+  }
+  .hero-copy .hero-kicker {
+    margin-bottom: 22px;
+  }
+  .hero-copy .hero-intro {
+    margin-top: 22px;
+  }
+  .hero-copy .hero-actions {
+    margin-top: 24px;
+  }
+  .photo-caption {
+    padding: 16px 18px;
+  }
+  .photo-caption p {
+    margin-top: 6px;
+    font-size: 20px;
+  }
+  .photo-caption .eyebrow {
+    font-size: 8px;
   }
   .hero-copy h1 {
     font-size: clamp(3.5rem, 12vw, 5rem);
@@ -533,5 +584,54 @@
   }
   .care-card:hover {
     transform: none;
+  }
+}
+
+.editorial-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.middle-photo-break {
+  padding-block: 0 60px;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .hero-copy {
+    column-gap: 32px;
+  }
+  .hero-copy h1 {
+    font-size: 4rem;
+  }
+}
+
+.team-photo-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+.team-photo-heading h2 {
+  margin-top: 16px;
+}
+.team-photo-heading > p {
+  max-width: 350px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.middle-photo-break figcaption {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+@media (max-width: 767px) {
+  .team-photo-heading {
+    display: block;
+  }
+  .team-photo-heading > p {
+    margin-top: 20px;
   }
 }
