@@ -635,3 +635,87 @@
     margin-top: 20px;
   }
 }
+
+/* Team photograph behind the opening headline and introduction. */
+.hero-team-banner {
+  position: relative;
+  isolation: isolate;
+  background: var(--forest);
+  color: white;
+}
+.hero-team-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+  z-index: -2;
+}
+.hero-team-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgb(5 30 27 / 0.88) 0%,
+    rgb(5 30 27 / 0.72) 42%,
+    rgb(5 30 27 / 0.26) 100%
+  );
+}
+.hero-team-banner .hero-copy {
+  display: block;
+  padding-block: 66px;
+  min-height: 650px;
+}
+.hero-team-banner .hero-kicker {
+  color: var(--sun);
+  margin-bottom: 25px;
+}
+.hero-team-banner .hero-kicker > span {
+  background: var(--sun);
+}
+.hero-team-banner h1 {
+  color: white;
+  max-width: 750px;
+}
+.hero-team-banner h1 > span {
+  color: var(--sun);
+}
+.hero-team-banner .hero-intro {
+  color: rgb(255 255 255 / 0.92);
+  max-width: 530px;
+  margin-top: 26px;
+}
+.hero-team-banner .hero-actions {
+  margin-top: 28px;
+}
+.hero-team-banner .hero-text-link,
+.hero-team-banner .hero-note strong {
+  color: white;
+}
+.hero-team-banner .hero-note {
+  max-width: 530px;
+  border-color: rgb(255 255 255 / 0.3);
+  margin-top: 28px;
+}
+.hero-team-banner .hero-note-icon {
+  color: var(--sun);
+  border-color: rgb(255 255 255 / 0.5);
+}
+.hero-team-banner .hero-note p > span {
+  color: rgb(255 255 255 / 0.85);
+}
+@media (max-width: 767px) {
+  .hero-team-banner .hero-copy {
+    padding-block: 44px;
+    min-height: 650px;
+  }
+  .hero-team-banner::after {
+    background: linear-gradient(90deg, rgb(5 30 27 / 0.83), rgb(5 30 27 / 0.62));
+  }
+  .hero-team-background {
+    object-position: 53% 65%;
+  }
+}

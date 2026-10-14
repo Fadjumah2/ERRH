@@ -64,8 +64,16 @@ function Home() {
   return (
     <>
       <section className="home-hero">
-        <div className="site-container hero-layout">
-          <div className="hero-copy">
+        <div className="hero-team-banner">
+          <img
+            className="hero-team-background"
+            src={team}
+            alt="Hospital team gathered outside Entebbe Regional Referral Hospital"
+            width={2048}
+            height={1536}
+            fetchPriority="high"
+          />
+          <div className="site-container hero-copy">
             <p className="eyebrow hero-kicker">
               <span /> Entebbe Regional Referral Hospital
             </p>
@@ -81,7 +89,7 @@ function Home() {
               for you and the people you love.
             </p>
             <div className="hero-actions">
-              <Button asChild variant="forest" size="lg">
+              <Button asChild variant="sun" size="lg">
                 <Link to="/services/">
                   Find the care you need <ArrowUpRight />
                 </Link>
@@ -100,6 +108,8 @@ function Home() {
               </p>
             </div>
           </div>
+        </div>
+        <div className="site-container hero-layout">
           <div className="hero-visual">
             <figure className="hospital-hero-photo">
               <img
@@ -107,7 +117,7 @@ function Home() {
                 alt="Front gate of Entebbe Regional Referral Hospital"
                 width={1344}
                 height={796}
-                fetchPriority="high"
+                loading="lazy"
               />
               <figcaption className="photo-caption">
                 <div>
