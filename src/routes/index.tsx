@@ -1,4 +1,12 @@
-import { exterior, team, immunisation, surgery, equipment, partnership } from "@/lib/images";
+import {
+  exterior,
+  team,
+  immunisation,
+  surgery,
+  equipment,
+  partnership,
+  frontGate,
+} from "@/lib/images";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -96,8 +104,10 @@ function Home() {
           <div className="hero-visual">
             <figure className="hospital-hero-photo">
               <img
-                src={exterior}
-                alt="Entebbe Regional Referral Hospital building"
+                src={frontGate}
+                alt="Front gate of Entebbe Regional Referral Hospital"
+                width={1344}
+                height={796}
                 fetchPriority="high"
               />
               <div className="photo-location">

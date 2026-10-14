@@ -1,5 +1,6 @@
 import equipmentPhoto from "../../Assets/HBWNQaGWUAA6AIc.jpeg";
 import partnershipPhoto from "../../Assets/HOUXaHWW0AAlKUt.jpeg";
+import frontGatePhoto from "../../Assets/hero.jpg";
 
 // Vite's base includes /ERRH/ for GitHub Pages and / for Lovable/local builds.
 const imageBase = `${import.meta.env.BASE_URL}images/`;
@@ -11,4 +12,5 @@ export const surgery = `${imageBase}surgical-camp.jpg`;
 
 export const equipment = equipmentPhoto;
 export const partnership = partnershipPhoto;
+export const frontGate = frontGatePhoto;
 export const hospitalLogo = `${import.meta.env.BASE_URL}branding/hospital-crest.webp`;
