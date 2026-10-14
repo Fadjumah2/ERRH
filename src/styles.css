@@ -40,32 +40,32 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #fcfaf6;
-  --foreground: #2f2035;
-  --card: #ffffff;
-  --card-foreground: #2f2035;
-  --popover: #ffffff;
-  --popover-foreground: #2f2035;
-  --primary: #683d78;
-  --primary-foreground: #ffffff;
-  --secondary: #eee7f1;
-  --secondary-foreground: #442451;
-  --muted: #f1edf2;
-  --muted-foreground: #6d6470;
-  --accent: #e9c579;
-  --accent-foreground: #38213f;
-  --border: #e5dee6;
-  --input: #e5dee6;
-  --ring: #815392;
-  --destructive: #b52e3c;
-  --destructive-foreground: #ffffff;
-  --forest: #442451;
-  --forest-foreground: #fcfaf6;
-  --sage: #f0eaf2;
-  --sage-foreground: #442451;
-  --sun: #edce8e;
-  --sun-foreground: #38213f;
-  --ink-soft: #625569;
+  --background: oklch(0.985 0.008 164);
+  --foreground: oklch(0.23 0.045 190);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.23 0.045 190);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.23 0.045 190);
+  --primary: oklch(0.36 0.082 187);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.91 0.035 163);
+  --secondary-foreground: oklch(0.27 0.058 184);
+  --muted: oklch(0.946 0.018 161);
+  --muted-foreground: oklch(0.48 0.027 190);
+  --accent: oklch(0.85 0.084 75);
+  --accent-foreground: oklch(0.27 0.058 184);
+  --border: oklch(0.87 0.025 170);
+  --input: oklch(0.87 0.025 170);
+  --ring: oklch(0.51 0.08 184);
+  --destructive: oklch(0.56 0.19 28);
+  --destructive-foreground: oklch(1 0 0);
+  --forest: oklch(0.25 0.055 185);
+  --forest-foreground: oklch(0.98 0.007 164);
+  --sage: oklch(0.91 0.046 161);
+  --sage-foreground: oklch(0.26 0.06 185);
+  --sun: oklch(0.85 0.12 78);
+  --sun-foreground: oklch(0.25 0.055 185);
+  --ink-soft: oklch(0.39 0.035 185);
 }
 
 @layer base {
@@ -106,13 +106,13 @@
   .hero-shade {
     background: linear-gradient(
       90deg,
-      rgb(34 16 43 / 0.86) 0%,
-      rgb(34 16 43 / 0.55) 48%,
-      rgb(34 16 43 / 0.12) 100%
+      rgb(8 43 40 / 0.86) 0%,
+      rgb(8 43 40 / 0.55) 48%,
+      rgb(8 43 40 / 0.12) 100%
     );
   }
   .image-shade {
-    background: linear-gradient(0deg, rgb(34 16 43 / 0.85), transparent 65%);
+    background: linear-gradient(0deg, rgb(8 43 40 / 0.85), transparent 65%);
   }
   .soft-grid {
     background-image:
@@ -130,9 +130,9 @@
   .hero-shade {
     background: linear-gradient(
       0deg,
-      rgb(34 16 43 / 0.9) 0%,
-      rgb(34 16 43 / 0.6) 48%,
-      rgb(34 16 43 / 0.12) 100%
+      rgb(8 43 40 / 0.9) 0%,
+      rgb(8 43 40 / 0.6) 48%,
+      rgb(8 43 40 / 0.12) 100%
     );
   }
 }
@@ -142,7 +142,7 @@
     scroll-behavior: auto;
   }
 }
-/* Purple and gold follow the supplied hospital crest. */
+/* Original green palette with the updated hospital layout. */
 .site-header {
   border-bottom: 1px solid var(--border);
 }
@@ -191,12 +191,12 @@
   transform: translateY(0);
 }
 :focus-visible {
-  outline: 3px solid #aa7bba;
+  outline: 3px solid #6caaa0;
   outline-offset: 4px;
 }
 .home-hero {
   overflow: hidden;
-  background: radial-gradient(ellipse at 100% 15%, #ede4ef 0, transparent 55%), var(--background);
+  background: radial-gradient(ellipse at 100% 15%, #dcece3 0, transparent 55%), var(--background);
 }
 .hero-layout {
   display: grid;
@@ -272,7 +272,7 @@
 .hero-note-icon {
   width: 40px;
   height: 40px;
-  border: 1px solid #d5c4dc;
+  border: 1px solid #bdd8ce;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -314,7 +314,7 @@
   border-radius: 90px 14px 14px 14px;
   background: var(--forest);
   aspect-ratio: 1.04;
-  box-shadow: 0 24px 55px -35px #3a1d5377;
+  box-shadow: 0 24px 55px -35px #163e3877;
 }
 .hospital-film video {
   width: 100%;
@@ -327,7 +327,7 @@
   pointer-events: none;
   position: absolute;
   inset: 45% 0 0;
-  background: linear-gradient(transparent, #211027dc);
+  background: linear-gradient(transparent, #082b28dc);
 }
 .film-location {
   position: absolute;
@@ -337,7 +337,7 @@
   align-items: center;
   gap: 8px;
   color: white;
-  background: #2816319c;
+  background: #123b359c;
   backdrop-filter: blur(8px);
   border: 1px solid #ffffff40;
   border-radius: 99px;
@@ -381,14 +381,14 @@
   gap: 7px;
   padding: 10px 12px;
   border: 1px solid #ffffff75;
-  background: #2a153b88;
+  background: #123b3588;
   border-radius: 99px;
   cursor: pointer;
   font-size: 11px;
   white-space: nowrap;
 }
 .film-control:hover {
-  background: #442451;
+  background: #123b35;
 }
 .hero-visual-foot {
   display: flex;
@@ -424,7 +424,7 @@
 }
 .care-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 34px -24px #44245177;
+  box-shadow: 0 16px 34px -24px #123b3577;
 }
 .hospital-journal {
   background: #f5f0e8;
@@ -490,7 +490,7 @@
   text-decoration: underline;
 }
 .page-hero-light {
-  background: linear-gradient(110deg, #eee5f1, #faf7f2);
+  background: linear-gradient(110deg, #dcece3, #f4f9f5);
 }
 .page-hero-crest {
   position: absolute;

@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#442451" },
+      { name: "theme-color", content: "#123b35" },
       { title: "Entebbe Regional Referral Hospital" },
       { name: "description", content: "Quality healthcare close to you in Entebbe, Uganda." },
       { property: "og:title", content: "Entebbe Regional Referral Hospital" },
