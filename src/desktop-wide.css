@@ -45,22 +45,58 @@
     border-radius: 0;
     object-fit: contain;
   }
+}
 
-  /* Mild visual lift for the "Our people. Our hospital." journal photography. */
-  .journal-grid img {
-    transition: transform 700ms ease;
-    transform-origin: center center;
-    will-change: transform;
+/* Mild zoom treatment for non-full-width content photography across the site. */
+main img {
+  transition: transform 700ms ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Full-width or decorative images remain intentionally static. */
+main .hero-team-background,
+main .hospital-hero-photo img,
+main .middle-photo-break .editorial-photo,
+main .page-hero-crest,
+main section.relative.overflow-hidden > img.absolute.inset-0 {
+  transition: none !important;
+  transform: none !important;
+  will-change: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  main img:hover {
+    transform: scale(1.045);
   }
 
-  .journal-grid figure:hover img {
-    transform: scale(1.045);
+  main .hero-team-background:hover,
+  main .hospital-hero-photo img:hover,
+  main .middle-photo-break .editorial-photo:hover,
+  main .page-hero-crest:hover,
+  main section.relative.overflow-hidden > img.absolute.inset-0:hover {
+    transform: none !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  main img:active {
+    transform: scale(1.035);
+  }
+
+  main .hero-team-background:active,
+  main .hospital-hero-photo img:active,
+  main .middle-photo-break .editorial-photo:active,
+  main .page-hero-crest:active,
+  main section.relative.overflow-hidden > img.absolute.inset-0:active {
+    transform: none !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .journal-grid img {
+  main img {
     transition: none !important;
     transform: none !important;
+    will-change: auto;
   }
 }
