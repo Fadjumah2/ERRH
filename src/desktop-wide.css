@@ -45,4 +45,22 @@
     border-radius: 0;
     object-fit: contain;
   }
+
+  /* Mild visual lift for the "Our people. Our hospital." journal photography. */
+  .journal-grid img {
+    transition: transform 700ms ease;
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  .journal-grid figure:hover img {
+    transform: scale(1.045);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journal-grid img {
+    transition: none !important;
+    transform: none !important;
+  }
 }
