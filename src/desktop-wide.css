@@ -1,0 +1,48 @@
+/* Desktop-only full-width treatment for standalone homepage photography.
+   Mobile and grouped/gallery imagery intentionally remain unchanged. */
+@media (min-width: 1024px) {
+  .home-hero > .hero-layout {
+    width: 100%;
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .home-hero > .hero-layout .hospital-hero-photo {
+    border-radius: 0;
+  }
+
+  .home-hero > .hero-layout .hospital-hero-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .home-hero > .hero-layout .hero-visual-foot {
+    width: min(100% - 2.5rem, 1220px);
+    margin-inline: auto;
+  }
+
+  .middle-photo-break {
+    width: 100%;
+    max-width: none;
+  }
+
+  .middle-photo-break .team-photo-heading,
+  .middle-photo-break figcaption {
+    width: min(100% - 2.5rem, 1220px);
+    margin-inline: auto;
+  }
+
+  .middle-photo-break figure {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .middle-photo-break .editorial-photo {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
+  }
+}
